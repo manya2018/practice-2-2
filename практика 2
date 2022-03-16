@@ -1,0 +1,21 @@
+task 1
+Task 3
+#include <iostream>
+#include <cmath>
+int main()
+{
+    using namespace std;
+    int  y=0, i, a=0;
+    int r, x;
+    cin >> i;
+    x=i%10;
+    do
+    {
+        i=i/10;
+        r=pow(2,a);
+        y=y+x*r;
+        a=a+1;
+        x=i%10;
+    }while(i>0);
+    cout << y << endl;
+}
