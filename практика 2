@@ -1,5 +1,22 @@
-task 1
-Task 3
+TASK 1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+cout << "#include <iostream>\n"
+            "int main() {\n"
+            "std::cout << \"Hello, World!\\n\" << std::endl;\n"
+            "return 0;\n"
+            "}" << endl;
+
+}
+
+TASK 2 
+
+
+
+TASK 3
 #include <iostream>
 #include <cmath>
 int main()
@@ -19,3 +36,40 @@ int main()
     }while(i>0);
     cout << y << endl;
 }
+TASK 4
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    int chislo; // chislo - десятичное число
+    cout << " введите число" << endl;
+    cin >> chislo;
+    int bin = 0, k = 0, n=0;// bin - двоичное число , n - количество цифр в двоичном числе, k - вспомогательная переменная
+    while (chislo>1) {   
+        k=chislo%2;
+        if (k==0)
+        {
+            k=k+2;
+        }
+        bin=bin +pow(10,n)*k;
+        chislo /= 2;
+        n++;
+    }
+    for  (int i=0;i<(n);i++) // вывод двоичного числа
+    {
+        if (bin%10==1)
+        {
+            cout << "1" ;
+        }
+        else
+        {
+            cout<< "0" ;
+        }
+        bin=bin/10;
+    }
+    
+}
+
