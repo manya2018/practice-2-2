@@ -14,57 +14,44 @@ cout << "#include <iostream>\n"
 
 TASK 2 
 #include <iostream>
-#include <string>
+#include <vector>
 using namespace std;
-
 int main() {
-    system("chcp 65001");
-    char first[100];
-    char second[100];
-    cout << "введите две строчки" << endl;
-    gets(first);
-    gets(second);
-    for (int i=0;i<101;i++)
-    {
-        if (first[i]=='\0')
-        {
-            break;
-        }
-        for(int k=0; k<101;k++)
-        {
-            cout << "первое, i " << first[i] << i<< endl;
-            cout << " второе, k" << second[k] << k << endl;
-            if (second[k]=='\0')
-            {
-                break;
-            }
 
-            if( first[i]==second[k])
-            {
-
-                cout << "значение" << first[i]<< "позиция:" << k+1 << endl;
-            }
-
-        }
-
-
+    int n;
+    cin >> n;
+    int k=n;
+    char word;
+    vector <char> first ;
+    vector <char> second;
+    while(n>0) {
+        cin >> word;
+        n--;
+        first.push_back(word);
     }
-    /*string slovo;
-    string second;
-    string word;
-    int k = 0;
+    while(n>0) {
+        n--;
+        cin >> word;
+        second.push_back(word);
+    }
 
-
-    for ( istringstream is( second ); is >> word; ) {
-
-        k++;
-
-        if (word == slovo) {
-            cout << "Расположение: " << k << " Слово: " << word << std::endl;
+    while (n>0)
+    {
+        while(k>0)
+        {
+            if (first[n]==second[k])
+           {
+               cout << "word" << first[n] << " nomber" << k+1 << endl;
+               break;
+           }
+            k--;
         }
-    }*/
-        return 0;
+        k=0;
+        n--;
+    }
+     return 0;
 }
+
 
 
 
